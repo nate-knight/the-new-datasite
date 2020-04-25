@@ -32,6 +32,9 @@
     "redaction-e2e": {
       "tags": [],
       "implicitDependencies": ["redaction"]
+    },
+    "shared-ui": {
+      "tags": []
     }
   }
 }
