@@ -25,6 +25,13 @@
     "diligence-e2e": {
       "tags": [],
       "implicitDependencies": ["diligence"]
+    },
+    "redaction": {
+      "tags": []
+    },
+    "redaction-e2e": {
+      "tags": [],
+      "implicitDependencies": ["redaction"]
     }
   }
 }
