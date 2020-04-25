@@ -16,7 +16,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@the-new-datasite/shared/ui": ["libs/shared/ui/src/index.ts"]
+      "@the-new-datasite/shared/ui": ["libs/shared/ui/src/index.ts"],
+      "@the-new-datasite/diligence/feature-shell": [
+        "libs/diligence/feature-shell/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

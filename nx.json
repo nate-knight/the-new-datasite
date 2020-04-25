@@ -35,6 +35,9 @@
     },
     "shared-ui": {
       "tags": []
+    },
+    "diligence-feature-shell": {
+      "tags": []
     }
   }
 }
