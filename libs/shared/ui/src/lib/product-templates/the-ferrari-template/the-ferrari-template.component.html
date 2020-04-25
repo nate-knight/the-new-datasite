@@ -1,4 +1,8 @@
 <div class="container">
-    <div class="header-placeholder">header</div>
-    <div class="router-outlet-placeholder">router-outlet</div>
+    <div class="header-placeholder">
+        <ng-content select=".header-content"></ng-content>
+    </div>
+    <div class="router-outlet-placeholder">
+        <ng-content select=".router-outlet"></ng-content>
+    </div>
 </div>

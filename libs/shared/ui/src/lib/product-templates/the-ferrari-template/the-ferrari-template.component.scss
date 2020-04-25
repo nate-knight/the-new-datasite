@@ -1,9 +1,15 @@
 .container {
-    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
+
 .header-placeholder {
-    border: 1px solid;
+    background: lightgray;
+    height: 56px;
 }
+
 .router-outlet-placeholder {
-    border: 1px solid;
+    background: lightgray;
+    flex: 1;
 }
