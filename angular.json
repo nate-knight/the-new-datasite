@@ -1,6 +1,130 @@
 {
   "version": 1,
-  "projects": {},
+  "projects": {
+    "diligence": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/diligence",
+      "sourceRoot": "apps/diligence/src",
+      "prefix": "the-new-datasite",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/diligence",
+            "index": "apps/diligence/src/index.html",
+            "main": "apps/diligence/src/main.ts",
+            "polyfills": "apps/diligence/src/polyfills.ts",
+            "tsConfig": "apps/diligence/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/diligence/src/favicon.ico",
+              "apps/diligence/src/assets"
+            ],
+            "styles": ["apps/diligence/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/diligence/src/environments/environment.ts",
+                  "with": "apps/diligence/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "diligence:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "diligence:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "diligence:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/diligence/tsconfig.app.json",
+              "apps/diligence/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/diligence/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/diligence/jest.config.js",
+            "tsConfig": "apps/diligence/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/diligence/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "diligence-e2e": {
+      "root": "apps/diligence-e2e",
+      "sourceRoot": "apps/diligence-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/diligence-e2e/cypress.json",
+            "tsConfig": "apps/diligence-e2e/tsconfig.e2e.json",
+            "devServerTarget": "diligence:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "diligence:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/diligence-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/diligence-e2e/**"]
+          }
+        }
+      }
+    }
+  },
   "cli": {
     "defaultCollection": "@nrwl/angular"
   },
@@ -12,5 +136,6 @@
     "@nrwl/angular:library": {
       "unitTestRunner": "jest"
     }
-  }
+  },
+  "defaultProject": "diligence"
 }

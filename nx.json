@@ -18,5 +18,13 @@
       }
     }
   },
-  "projects": {}
+  "projects": {
+    "diligence": {
+      "tags": []
+    },
+    "diligence-e2e": {
+      "tags": [],
+      "implicitDependencies": ["diligence"]
+    }
+  }
 }
