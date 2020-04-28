@@ -1,0 +1,19 @@
+@import '~node_modules/@angular/material/theming';
+
+@mixin light-bulb-theme($theme) {
+    $primary: map-get($theme, primary);
+  
+  
+    .light-bulb{
+        color: mat-color($primary);
+    }
+    
+}
+
+//1. can we get color from sass variable?
+i {
+     color: $nate;
+    //  color: red;
+ }
+
+//   @include themed-color-box-theme($datasite-light-theme);

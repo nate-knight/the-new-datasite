@@ -11,11 +11,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DocumentsShellComponent } from '../../../../libs/documents/feature-shell/src/lib/documents-shell/documents-shell.component';
 import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
+// import {MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    // MatButtonModule,
 
     RouterModule.forRoot([
       { path: '', redirectTo: 'diligence', pathMatch: 'full'},
