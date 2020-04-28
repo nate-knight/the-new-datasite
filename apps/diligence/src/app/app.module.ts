@@ -7,6 +7,7 @@ import { ShellComponent } from '@the-new-datasite/diligence/feature-shell';
 // import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { DocumentsShellComponent } from '../../../../libs/documents/feature-shell/src/lib/documents-shell/documents-shell.component';
 import { DiligenceFeatureShellModule } from '@the-new-datasite/diligence/feature-shell';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -65,6 +66,8 @@ import { DiligenceFeatureShellModule } from '@the-new-datasite/diligence/feature
         ]
       }
     ]),
+    
+    BrowserAnimationsModule,
     
   ],
   providers: [],

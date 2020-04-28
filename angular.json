@@ -25,7 +25,10 @@
               "apps/diligence/src/favicon.ico",
               "apps/diligence/src/assets"
             ],
-            "styles": ["apps/diligence/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/diligence/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +86,10 @@
               "apps/diligence/tsconfig.app.json",
               "apps/diligence/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/diligence/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/diligence/**"
+            ]
           }
         },
         "test": {
@@ -118,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/diligence-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/diligence-e2e/**"]
+            "tsConfig": [
+              "apps/diligence-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/diligence-e2e/**"
+            ]
           }
         }
       }
@@ -142,7 +153,9 @@
               "apps/redaction/src/favicon.ico",
               "apps/redaction/src/assets"
             ],
-            "styles": ["apps/redaction/src/styles.scss"],
+            "styles": [
+              "apps/redaction/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -189,7 +202,10 @@
               "apps/redaction/tsconfig.app.json",
               "apps/redaction/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/redaction/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/redaction/**"
+            ]
           }
         },
         "test": {
@@ -223,8 +239,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/redaction-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/redaction-e2e/**"]
+            "tsConfig": [
+              "apps/redaction-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/redaction-e2e/**"
+            ]
           }
         }
       }
@@ -242,7 +263,10 @@
               "libs/shared/ui/tsconfig.lib.json",
               "libs/shared/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui/**"
+            ]
           }
         },
         "test": {
