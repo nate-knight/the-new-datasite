@@ -9,6 +9,7 @@ import { ShellComponent } from '@the-new-datasite/diligence/feature-shell';
 import { DiligenceFeatureShellModule } from '@the-new-datasite/diligence/feature-shell';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { DocumentsShellComponent } from '../../../../libs/documents/feature-shell/src/lib/documents-shell/documents-shell.component';
+import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
 
 @NgModule({
@@ -25,8 +26,8 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
           {path: '', redirectTo: 'permissions', pathMatch: 'full'},
           {
             path: 'content',
-            // component: DocumentsShellComponent,
-            loadChildren: '@the-new-datasite/documents/feature-shell#DocumentsFeatureShellModule'
+            component: DocumentsShellComponent,
+            // loadChildren: '@the-new-datasite/documents/feature-shell#DocumentsFeatureShellModule'
           },
           {
             path: 'permissions',

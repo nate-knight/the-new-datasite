@@ -7,6 +7,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from "@angular/material/button";
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
+import { LightBulbComponent } from './light-bulb/light-bulb.component';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import {MatCardModule} from '@angular/material/card';
     MatTabsModule,
     MatCardModule
   ],
-  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent],
-  exports: [TheFerrariTemplateComponent, ProductHeaderComponent]
+  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent],
+  exports: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent]
 })
 export class SharedUiModule {}
