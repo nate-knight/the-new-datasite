@@ -38,6 +38,9 @@
     },
     "diligence-feature-shell": {
       "tags": []
+    },
+    "documents-feature-shell": {
+      "tags": []
     }
   }
 }

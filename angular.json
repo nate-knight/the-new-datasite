@@ -295,6 +295,41 @@
           "style": "scss"
         }
       }
+    },
+    "documents-feature-shell": {
+      "projectType": "library",
+      "root": "libs/documents/feature-shell",
+      "sourceRoot": "libs/documents/feature-shell/src",
+      "prefix": "the-new-datasite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/documents/feature-shell/tsconfig.lib.json",
+              "libs/documents/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/documents/feature-shell/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/documents/feature-shell/jest.config.js",
+            "tsConfig": "libs/documents/feature-shell/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/documents/feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

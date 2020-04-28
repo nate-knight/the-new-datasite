@@ -19,6 +19,9 @@
       "@the-new-datasite/shared/ui": ["libs/shared/ui/src/index.ts"],
       "@the-new-datasite/diligence/feature-shell": [
         "libs/diligence/feature-shell/src/index.ts"
+      ],
+      "@the-new-datasite/documents/feature-shell": [
+        "libs/documents/feature-shell/src/index.ts"
       ]
     }
   },
