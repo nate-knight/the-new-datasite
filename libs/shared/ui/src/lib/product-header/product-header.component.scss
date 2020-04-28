@@ -2,11 +2,36 @@
     height: 56px;
     display: flex;
     align-items: center;
-
+    
 }
 
-.logo {
-    width: 150px;
-    height: 39px;
-    border: 1px solid;
+.logo-container {
+    width: 242px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+        width: 150px;
+        height: 39px;
+        border: 1px dashed;
+    }
+}
+
+//todo put in ov
+::ng-deep {
+
+    .mat-tab-list mat-ink-bar {
+        display: none;
+    }
+
+    // .mat-tab-label-active {
+    //     background: rgb(0, 255, 213);
+    // }
+
+    .mat-tab-link.mat-tab-label-active {
+        background: blue;
+    }
+
 }

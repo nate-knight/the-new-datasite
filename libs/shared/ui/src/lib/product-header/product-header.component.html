@@ -1,7 +1,26 @@
 <div class="product-header">
-    <div class="logo">logo</div>
-    <div class="nav">
-        nav
+    <div class="logo-container">
+        <div class="logo"></div>
     </div>
+    <!-- <div class="nav">
+        <button mat-button >Documents</button>
+        <button mat-button >Permissons</button>
+        
+    </div> -->
+    <!-- <nav>
+        <ul>
+          <li><a routerLink="/content" routerLinkActive="active">Documents</a></li>
+          <li><a routerLink="/permissions" routerLinkActive="active">Permissions</a></li>
+        </ul>
+    </nav> -->
+<!-- <button mat-raised-button color="primary"> Click me</button> -->
+    <!-- <nav> -->
+
+    <nav mat-tab-nav-bar color="primary">
+        <a mat-tab-link active="true" routerLink="/content">Documents  </a>
+        <a mat-tab-link routerLink="/permissions"> Permissions</a>
+        <a mat-tab-link > Q&A </a>
+          
+    </nav>
     <div class="search">search</div>
 </div>
