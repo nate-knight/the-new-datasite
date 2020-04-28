@@ -1,4 +1,4 @@
-<div class="product-header">
+<div class="product-header  mat-elevation-z2">
     <div class="logo-container">
         <div class="logo"></div>
     </div>
@@ -17,10 +17,10 @@
     <!-- <nav> -->
 
     <nav mat-tab-nav-bar color="primary">
-        <a mat-tab-link active="true" routerLink="/content">Documents  </a>
-        <a mat-tab-link routerLink="/permissions"> Permissions</a>
-        <a mat-tab-link > Q&A </a>
-          
+        <a mat-tab-link routerLink="content" routerLinkActive="active">Documents</a>
+        <a mat-tab-link routerLink="permissions" routerLinkActive="active">Permissions</a>
+        <a mat-tab-link routerLink="qa" routerLinkActive="active"> Q&A </a>
     </nav>
     <div class="search">search</div>
 </div>
+<router-outlet></router-outlet>

@@ -22,6 +22,9 @@
       ],
       "@the-new-datasite/documents/feature-shell": [
         "libs/documents/feature-shell/src/index.ts"
+      ],
+      "@the-new-datasite/permissions/feature-shell": [
+        "libs/permissions/feature-shell/src/index.ts"
       ]
     }
   },
