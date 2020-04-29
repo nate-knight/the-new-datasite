@@ -1,5 +1,6 @@
 @import 'palette';
 @import 'custom-component-themes';
+@import 'custom-class-themes';
 @import '~@angular/material/theming';
 
 // @import '~/node_modules/@angular/material/theming';
@@ -25,13 +26,14 @@ $dark-theme: mat-dark-theme($primary-palette, $accent-palette, $warn-palette);
 @include custom-component-themes($light-theme);
 
 // @include utility-themes($light-theme);
+@include custom-class-themes($light-theme);
 
 
 //  OPTIONAL:
 .app-dark-theme {
   @include angular-material-theme($dark-theme);
   @include custom-component-themes($dark-theme);
-//   @include utility-themes($dark-theme);
+  @include custom-class-themes($dark-theme);
 }
 
 
