@@ -5,5 +5,5 @@
 @mixin custom-component-themes($theme) {
     @include product-header-theme($theme);
     @include branding-bar-theme($theme);
-    // @include light-bulb-theme($theme);
+    @include light-bulb-theme($theme);
 }

@@ -1,0 +1,28 @@
+@import 'palette';
+@import 'custom-component-themes';
+@import 'custom-class-themes';
+@import '~@angular/material/theming';
+
+
+@mixin generate-theme($primary, $accent, $warn) {
+
+    @include mat-core();
+
+    $primary-palette: mat-palette($primary);
+    $accent-palette: mat-palette($accent);
+    $warn-palette: mat-palette($warn);
+
+    $light-theme: mat-light-theme($primary-palette, $accent-palette, $warn-palette);
+    $dark-theme: mat-dark-theme($primary-palette, $accent-palette, $warn-palette);
+
+    @include angular-material-theme($light-theme);
+    @include custom-component-themes($light-theme);
+    @include custom-class-themes($light-theme);
+
+
+    .app-dark-theme {
+    @include angular-material-theme($dark-theme);
+    @include custom-component-themes($dark-theme);
+    @include custom-class-themes($dark-theme);
+    }
+}
