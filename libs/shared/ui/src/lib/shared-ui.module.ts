@@ -9,6 +9,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import { LightBulbComponent } from './light-bulb/light-bulb.component';
 import { BrandingBarComponent } from './branding-bar/branding-bar.component';
+import { CapabilitySchmapabilityTemplateComponent } from './capability-templates/capability-schmapability-template/capability-schmapability-template.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,7 @@ import { BrandingBarComponent } from './branding-bar/branding-bar.component';
     MatTabsModule,
     MatCardModule
   ],
-  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent],
-  exports: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent]
+  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent],
+  exports: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, CapabilitySchmapabilityTemplateComponent]
 })
 export class SharedUiModule {}

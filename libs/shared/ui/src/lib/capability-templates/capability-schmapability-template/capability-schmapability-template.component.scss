@@ -1,0 +1,28 @@
+.capability-container {
+    height: 100%;
+    display: flex;
+}
+.left-rail{
+    min-width: 225px;
+    height: 100%;
+    border-right: 1px solid #E5E5E5;
+}
+
+.main {
+    padding: 18px;
+    width: 100%;
+
+    .panel {
+        border: 1px solid #e5e5e5;
+        border-radius: 3px;
+        height: calc(100% - 48px);
+        padding: 24px;
+        
+
+        .title {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+    }
+}
