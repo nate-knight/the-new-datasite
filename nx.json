@@ -47,6 +47,16 @@
     },
     "shared-theming": {
       "tags": []
+    },
+    "acquire": {
+      "tags": []
+    },
+    "acquire-e2e": {
+      "tags": [],
+      "implicitDependencies": ["acquire"]
+    },
+    "acquire-feature-shell": {
+      "tags": []
     }
   }
 }

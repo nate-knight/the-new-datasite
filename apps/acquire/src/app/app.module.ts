@@ -4,9 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { ShellComponent } from '@the-new-datasite/diligence/feature-shell';
+//
+import { ShellComponent } from '@the-new-datasite/acquire/feature-shell';
 import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
 
@@ -14,12 +13,11 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    // MatButtonModule,
-
+    // RouterModule.forRoot([], { initialNavigation: 'enabled' })
     RouterModule.forRoot([
-      { path: '', redirectTo: 'diligence', pathMatch: 'full'},
+      { path: '', redirectTo: 'acquire', pathMatch: 'full'},
       { 
-        path: 'diligence', 
+        path: 'acquire', 
         component: ShellComponent,
         children: [
           {path: '', redirectTo: 'content', pathMatch: 'full'},
@@ -35,9 +33,6 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
         ]
       }
     ]),
-    
-    BrowserAnimationsModule,
-    // SharedThemingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

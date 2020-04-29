@@ -400,6 +400,161 @@
           "style": "scss"
         }
       }
+    },
+    "acquire": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/acquire",
+      "sourceRoot": "apps/acquire/src",
+      "prefix": "the-new-datasite",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/acquire",
+            "index": "apps/acquire/src/index.html",
+            "main": "apps/acquire/src/main.ts",
+            "polyfills": "apps/acquire/src/polyfills.ts",
+            "tsConfig": "apps/acquire/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/acquire/src/favicon.ico",
+              "apps/acquire/src/assets"
+            ],
+            "styles": ["apps/acquire/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/acquire/src/environments/environment.ts",
+                  "with": "apps/acquire/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "acquire:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "acquire:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "acquire:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/acquire/tsconfig.app.json",
+              "apps/acquire/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/acquire/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/acquire/jest.config.js",
+            "tsConfig": "apps/acquire/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/acquire/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "acquire-e2e": {
+      "root": "apps/acquire-e2e",
+      "sourceRoot": "apps/acquire-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/acquire-e2e/cypress.json",
+            "tsConfig": "apps/acquire-e2e/tsconfig.e2e.json",
+            "devServerTarget": "acquire:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "acquire:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/acquire-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/acquire-e2e/**"]
+          }
+        }
+      }
+    },
+    "acquire-feature-shell": {
+      "projectType": "library",
+      "root": "libs/acquire/feature-shell",
+      "sourceRoot": "libs/acquire/feature-shell/src",
+      "prefix": "the-new-datasite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/acquire/feature-shell/tsconfig.lib.json",
+              "libs/acquire/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/acquire/feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/acquire/feature-shell/jest.config.js",
+            "tsConfig": "libs/acquire/feature-shell/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/acquire/feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {
