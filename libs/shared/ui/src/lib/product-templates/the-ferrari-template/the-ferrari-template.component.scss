@@ -1,15 +1,9 @@
-.container {
+.product-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
-.header-placeholder {
-    // background: lightgray;
-    height: 56px;
-}
-
-.router-outlet-placeholder {
-    // background: lightgray;
-    flex: 1;
+.outlet-wrapper {
+    flex: 1
 }
