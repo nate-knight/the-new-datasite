@@ -26,7 +26,7 @@ import {MatButtonModule } from '@angular/material/button';
         path: 'diligence', 
         component: ShellComponent,
         children: [
-          {path: '', redirectTo: 'permissions', pathMatch: 'full'},
+          {path: '', redirectTo: 'content', pathMatch: 'full'},
           {
             path: 'content',
             component: DocumentsShellComponent,
