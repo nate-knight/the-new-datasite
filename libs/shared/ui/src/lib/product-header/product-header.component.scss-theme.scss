@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+// @import '../../../../../node_modules/@angular/material/theming';
+
+@mixin product-header-theme($theme) {
+  $primary: map-get($theme, primary);
+
+  // .theme-bg-primary-color-gradient {
+  //   background: linear-gradient(90deg, mat-color($primary) 0%, lighten(mat-color($primary), 30%) 100%);
+  // }
+
+//   .themed-color-box {
+//     background: linear-gradient(90deg, mat-color($primary) 0%, lighten(mat-color($primary), 30%) 100%);
+//   }
+
+    .mat-tab-link {
+        color: rgba(0,0,0,.6);
+    }
+
+    .mat-tab-link.active {
+        //   background: mat-color($primary);
+        color: mat-color($primary);
+        background: mat-color($primary, 100);  
+    }
+
+}

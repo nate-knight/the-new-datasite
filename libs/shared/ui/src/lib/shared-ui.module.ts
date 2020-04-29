@@ -8,6 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatTabsModule } from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
 import { LightBulbComponent } from './light-bulb/light-bulb.component';
+import { BrandingBarComponent } from './branding-bar/branding-bar.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { LightBulbComponent } from './light-bulb/light-bulb.component';
     MatTabsModule,
     MatCardModule
   ],
-  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent],
+  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent],
   exports: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent]
 })
 export class SharedUiModule {}

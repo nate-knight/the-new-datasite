@@ -1,26 +1,22 @@
-<div class="product-header  mat-elevation-z2">
-    <div class="logo-container">
-        <div class="logo"></div>
-    </div>
-    <!-- <div class="nav">
-        <button mat-button >Documents</button>
-        <button mat-button >Permissons</button>
-        
-    </div> -->
-    <!-- <nav>
-        <ul>
-          <li><a routerLink="/content" routerLinkActive="active">Documents</a></li>
-          <li><a routerLink="/permissions" routerLinkActive="active">Permissions</a></li>
-        </ul>
-    </nav> -->
-<!-- <button mat-raised-button color="primary"> Click me</button> -->
-    <!-- <nav> -->
+<div class="product-container"> <!-- remove when router-outlet can be moved to parent -->
+    <ds-branding-bar></ds-branding-bar>
+    <div class="product-header  mat-elevation-z2">
+        <div class="logo-container">
+            <div class="logo"></div>
+        </div>
 
-    <nav mat-tab-nav-bar color="primary">
-        <a mat-tab-link routerLink="content" routerLinkActive="active">Documents</a>
-        <a mat-tab-link routerLink="permissions" routerLinkActive="active">Permissions</a>
-        <a mat-tab-link routerLink="qa" routerLinkActive="active"> Q&A </a>
-    </nav>
-    <div class="search">search</div>
+        <nav mat-tab-nav-bar color="primary">
+            <a mat-tab-link routerLink="content" routerLinkActive="active">Documents</a>
+            <a mat-tab-link routerLink="permissions" routerLinkActive="active">Permissions</a>
+            <a mat-tab-link routerLink="qa" routerLinkActive="active"> Q&A </a>
+        </nav>
+        <div class="search">search</div>
+
+
+    </div>
+
+    <!-- Move to parent  -->
+    <div class="outlet-wrapper">
+        <router-outlet></router-outlet>
+    </div>
 </div>
-<router-outlet></router-outlet>

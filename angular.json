@@ -368,6 +368,38 @@
           "style": "scss"
         }
       }
+    },
+    "shared-theming": {
+      "projectType": "library",
+      "root": "libs/shared/theming",
+      "sourceRoot": "libs/shared/theming/src",
+      "prefix": "the-new-datasite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/theming/tsconfig.lib.json",
+              "libs/shared/theming/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/theming/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/shared/theming/jest.config.js",
+            "tsConfig": "libs/shared/theming/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/shared/theming/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      }
     }
   },
   "cli": {

@@ -1,0 +1,8 @@
+// @import '../../../../libs/ui/src/lib/themed-color-box/themed-color-box.component.scss-theme';
+@import '../../../ui/src/lib/product-header/product-header.component.scss-theme.scss';
+@import '../../../ui/src/lib/branding-bar/branding-bar.component.scss-theme.scss';
+
+@mixin custom-component-themes($theme) {
+    @include product-header-theme($theme);
+    @include branding-bar-theme($theme);
+}

@@ -1,0 +1,89 @@
+@import 'colors';
+
+$ds-blue: (
+  50: $ds-blue50,
+  100: $ds-blue100,
+  200: $ds-blue200,
+  500: $ds-blue500,
+  700: $ds-blue700,
+  900: $ds-blue900,
+  A100: $ds-blue100,
+  A200: $ds-blue200,
+  A500: $ds-blue500,
+  A700: $ds-blue700,
+  A900: $ds-blue900,
+  contrast: (
+    50: $ds-grey900,
+    100: $ds-grey900,
+    200: $ds-grey900,
+    500: $ds-white,
+    700: $ds-white,
+    900: $ds-white,
+    A100: $ds-white,
+    A200: $ds-white,
+    A500: $ds-white,
+    A700: $ds-white,
+    A900: $ds-white
+  )
+);
+
+$ds-orange: (
+  100: $ds-orange50,
+  200: $ds-orange50,
+  300: $ds-orange50,
+  400: $ds-orange400,
+  500: $ds-orange500,
+  700: $ds-orange700,
+  A100: $ds-orange50,
+  A400: $ds-orange400,
+  A500: $ds-orange500,
+  A700: $ds-orange700,
+  contrast: (
+    100: $ds-grey900,
+    200: $ds-grey900,
+    300: $ds-grey900,
+    400: $ds-grey900,
+    500: $ds-white,
+    700: $ds-white,
+    A100: $ds-grey900,
+    A400: $ds-white,
+    A500: $ds-white,
+    A700: $ds-white
+  )
+);
+
+$ds-red: (
+  100: $ds-red100,
+  200: $ds-red100,
+  300: $ds-red100,
+  400: $ds-red400,
+  500: $ds-red500,
+  700: $ds-red700,
+  A100: $ds-red100,
+  A400: $ds-red400,
+  A500: $ds-red500,
+  A700: $ds-red700,
+  contrast: (
+    100: $ds-grey900,
+    200: $ds-grey900,
+    300: $ds-grey900,
+    400: $ds-grey900,
+    500: $ds-white,
+    700: $ds-white,
+    A100: $ds-grey900,
+    A400: $ds-white,
+    A500: $ds-white,
+    A700: $ds-white
+  )
+);
+
+$ds-grey: (
+  100: $ds-grey100,
+  200: $ds-grey200,
+  300: $ds-grey300,
+  400: $ds-grey400,
+  500: $ds-grey500,
+  700: $ds-grey700,
+  800: $ds-grey800,
+  900: $ds-grey900
+);

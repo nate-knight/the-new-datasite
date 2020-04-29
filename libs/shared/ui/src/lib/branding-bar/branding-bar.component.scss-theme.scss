@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+// @import '../../../../../node_modules/@angular/material/theming';
+
+@mixin branding-bar-theme($theme) {
+    $primary: map-get($theme, primary);
+
+    .branding-bar {
+        background: linear-gradient(90deg, mat-color($primary, 700) 0%, lighten(mat-color($primary, 700), 30%) 100%);
+    }
+}
+
