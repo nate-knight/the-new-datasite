@@ -4,14 +4,6 @@
 @mixin product-header-theme($theme) {
   $primary: map-get($theme, primary);
 
-  // .theme-bg-primary-color-gradient {
-  //   background: linear-gradient(90deg, mat-color($primary) 0%, lighten(mat-color($primary), 30%) 100%);
-  // }
-
-//   .themed-color-box {
-//     background: linear-gradient(90deg, mat-color($primary) 0%, lighten(mat-color($primary), 30%) 100%);
-//   }
-
     .mat-tab-link {
         color: rgba(0,0,0,.6);
     }
