@@ -57,6 +57,20 @@
     },
     "acquire-feature-shell": {
       "tags": []
+    },
+    "documents": {
+      "tags": []
+    },
+    "documents-e2e": {
+      "tags": [],
+      "implicitDependencies": ["documents"]
+    },
+    "harness": {
+      "tags": []
+    },
+    "harness-e2e": {
+      "tags": [],
+      "implicitDependencies": ["harness"]
     }
   }
 }
