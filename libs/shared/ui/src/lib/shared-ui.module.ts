@@ -12,6 +12,7 @@ import { BrandingBarComponent } from './branding-bar/branding-bar.component';
 import { CapabilitySchmapabilityTemplateComponent } from './capability-templates/capability-schmapability-template/capability-schmapability-template.component';
 import { ExpansionPanelOneComponent } from './expansion-panel-one/expansion-panel-one.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatButtonModule,
     MatTabsModule,
     MatCardModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatListModule
   ],
   declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent, ExpansionPanelOneComponent],
   exports: [

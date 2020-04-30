@@ -14,8 +14,6 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    // MatButtonModule,
-
     RouterModule.forRoot([
       { path: '', redirectTo: 'diligence', pathMatch: 'full'},
       { 
@@ -36,8 +34,7 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
       }
     ]),
     
-    BrowserAnimationsModule,
-    // SharedThemingModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

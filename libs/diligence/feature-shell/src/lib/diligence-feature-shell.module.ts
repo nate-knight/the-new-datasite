@@ -11,89 +11,9 @@ import { DocumentsShellComponent } from '../../../../documents/feature-shell/src
     CommonModule,
     SharedUiModule,
     RouterModule,
-    // RouterModule.forChild([
-    //   {
-    //     // path: '',
-    //     // component: ShellComponent,
-    //     // children: [
-    //       // {
-    //         path: '',
-    //         component: DocumentsShellComponent,
-    //         pathMatch: 'full',
-    //         // loadChildren: '@the-new-datasite/documents-shell-component#DocumentsFeatureShellModule'
-    //         loadChildren: () => import(DocumentsFeatureShellModule).then(m => m.ItemsModule)
-    //       // }
-    //     // ]
-    //   }
-    // ]),
-
-    // RouterModule.forChild([
-    //   {
-    //     path: '',
-    //     component: ShellComponent,
-    //     // pathMatch: 'full',
-    //     children: [
-    //       {
-    //         path: '/content',
-    //         component: DocumentsShellComponent,
-    //         pathMatch: 'full'
-    //       }
-    //     ]
-    //   }
-    // ]),
-
-    // RouterModule.forChild(
-    //   [
-    //     {
-    //       path: '',
-    //       component: ShellComponent,
-    //       pathMatch: 'full',
-    //       children: [
-    //         {
-    //           path: 'content',
-    //           component: DocumentsShellComponent,
-    //           pathMatch: 'full'
-    //         }
-    //       ],
-          
-    //     },
-    //   ],
-    //   // { initialNavigation: 'enabled' }
-    // )
-    // RouterModule.forRoot([
-    //   { 
-    //     path: '', 
-    //     component: ShellComponent, 
-    //     pathMatch: 'full',
-    //     // children: [
-    //     //   {
-    //     //     path: 'content',
-    //     //     component: DocumentsShellComponent,
-    //     //     pathMatch: 'full'
-    //     //   }
-    //     // ]
-    //   },
-    //   // { path: 'products/:productId', component: ProductDetailsComponent },
-    // ]),
-    // RouterModule.forChild([
-    //   { 
-    //     // path: '', 
-    //     // component: ShellComponent, 
-    //     // pathMatch: 'full',
-    //     children: [
-    //       {path: '', redirectTo: 'content'},
-    //       {
-    //         path: 'content',
-    //         component: DocumentsShellComponent,
-    //         pathMatch: 'full'
-    //       }
-    //     ]
-    //   },
-    //   // { path: 'products/:productId', component: ProductDetailsComponent },
-    // ])
+    
   ],
   declarations: [ShellComponent],
-  // entryComponents: [ShellComponent],
   exports: [ShellComponent]
 })
 export class DiligenceFeatureShellModule {}

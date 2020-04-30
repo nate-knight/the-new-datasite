@@ -8,12 +8,11 @@ import { RouterModule } from '@angular/router';
 import { ShellComponent } from '@the-new-datasite/acquire/feature-shell';
 import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    // RouterModule.forRoot([], { initialNavigation: 'enabled' })
     RouterModule.forRoot([
       { path: '', redirectTo: 'acquire', pathMatch: 'full'},
       { 
@@ -33,7 +32,9 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
         ]
       }
     ]),
+    BrowserAnimationsModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })
