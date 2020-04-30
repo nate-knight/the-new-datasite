@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+
+@mixin expansion-panel-one-theme($theme) {
+  $primary: map-get($theme, primary);
+
+    .mat-expansion-panel-one mat-list-item:hover {
+        background: mat-color($primary, 100);  
+    }
+}

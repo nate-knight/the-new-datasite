@@ -1,0 +1,17 @@
+
+<div class="mat-expansion-panel-one">
+    <mat-expansion-panel togglePosition='before' expanded="true">
+        <mat-expansion-panel-header>
+        <mat-panel-title>
+            {{title}}
+        </mat-panel-title>
+        <mat-panel-description>
+            
+        </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-list role="list">
+            <mat-list-item *ngFor="let item of items">{{item}}</mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</div>
