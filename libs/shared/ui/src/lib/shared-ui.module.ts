@@ -13,6 +13,7 @@ import { CapabilitySchmapabilityTemplateComponent } from './capability-templates
 import { ExpansionPanelOneComponent } from './expansion-panel-one/expansion-panel-one.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { CapabilityTemplateFullWidthMainComponent } from './capability-templates/capability-template-full-width-main/capability-template-full-width-main.component';
 
 @NgModule({
   imports: [
@@ -25,12 +26,13 @@ import { MatListModule } from '@angular/material/list';
     MatExpansionModule,
     MatListModule
   ],
-  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent, ExpansionPanelOneComponent],
+  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent, ExpansionPanelOneComponent, CapabilityTemplateFullWidthMainComponent],
   exports: [
     TheFerrariTemplateComponent,
     ProductHeaderComponent, 
     LightBulbComponent, 
     CapabilitySchmapabilityTemplateComponent,
+    CapabilityTemplateFullWidthMainComponent,
     ExpansionPanelOneComponent]
 })
 export class SharedUiModule {}
