@@ -4,20 +4,20 @@
 @import '~@angular/material/theming';
 
 
-@mixin generate-theme($primary, $accent, $warn) {
+@mixin generate-theme($primary, $secondary, $warn) {
 
     @include mat-core();
 
     $primary-palette: mat-palette($primary);
-    $accent-palette: mat-palette($accent);
+    $secondary-palette: mat-palette($secondary);
     $warn-palette: mat-palette($warn);
 
-    $light-theme: mat-light-theme($primary-palette, $accent-palette, $warn-palette);
-    $dark-theme: mat-dark-theme($primary-palette, $accent-palette, $warn-palette);
+    $light-theme: mat-light-theme($primary-palette, $secondary-palette, $warn-palette);
+    $dark-theme: mat-dark-theme($primary-palette, $secondary-palette, $warn-palette);
 
     @include angular-material-theme($light-theme);
     
-    
+
     @include custom-component-themes($light-theme);
 
     @include custom-class-themes($light-theme);

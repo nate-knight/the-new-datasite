@@ -1,0 +1,3 @@
+@import 'theme-generator';
+
+@include generate-theme( $diligence-blue, $branding-orange, $ds-red);
