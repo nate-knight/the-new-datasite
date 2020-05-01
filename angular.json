@@ -425,7 +425,8 @@
               "apps/acquire/src/favicon.ico",
               "apps/acquire/src/assets"
             ],
-            "styles": ["apps/acquire/src/styles.scss"],
+            "styles": ["apps/acquire/src/styles.scss",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css"],
             "scripts": []
           },
           "configurations": {
