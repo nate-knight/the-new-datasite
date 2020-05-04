@@ -1,5 +1,4 @@
 @import '~@angular/material/theming';
-// @import '../../../../../node_modules/@angular/material/theming';
 
 @mixin product-header-theme($theme) {
   $primary: map-get($theme, primary);
@@ -9,9 +8,12 @@
     }
 
     .mat-tab-link.active {
-        //   background: mat-color($primary);
-        color: mat-color($primary);
+        color: mat-color($primary, A500);
         background: mat-color($primary, 100);  
+    }
+
+    .mat-ripple-element {
+        background-color: rgba(mat-color($primary), .1);
     }
 
 }

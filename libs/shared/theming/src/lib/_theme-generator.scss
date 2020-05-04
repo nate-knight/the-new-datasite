@@ -17,7 +17,6 @@
 
     @include angular-material-theme($light-theme);
     
-
     @include custom-component-themes($light-theme);
 
     @include custom-class-themes($light-theme);
