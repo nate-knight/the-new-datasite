@@ -74,6 +74,9 @@
     },
     "qa-feature-shell": {
       "tags": []
+    },
+    "search-feature-shell": {
+      "tags": []
     }
   }
 }

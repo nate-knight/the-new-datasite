@@ -10,6 +10,7 @@ import { ShellComponent } from '@the-new-datasite/diligence/feature-shell';
 import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
 import { QaShellComponent } from '@the-new-datasite/qa/feature-shell';
+import { SearchShellComponent } from '@the-new-datasite/search/feature-shell'
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,6 +35,10 @@ import { QaShellComponent } from '@the-new-datasite/qa/feature-shell';
           {
             path: 'qa',
             component: QaShellComponent
+          },
+          {
+            path: 'search',
+            component: SearchShellComponent
           }
         ]
       }

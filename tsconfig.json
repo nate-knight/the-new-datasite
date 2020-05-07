@@ -32,6 +32,9 @@
       ],
       "@the-new-datasite/qa/feature-shell": [
         "libs/qa/feature-shell/src/index.ts"
+      ],
+      "@the-new-datasite/search/feature-shell": [
+        "libs/search/feature-shell/src/index.ts"
       ]
     }
   },
