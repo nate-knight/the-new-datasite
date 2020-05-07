@@ -77,6 +77,13 @@
     },
     "search-feature-shell": {
       "tags": []
+    },
+    "search": {
+      "tags": []
+    },
+    "search-e2e": {
+      "tags": [],
+      "implicitDependencies": ["search"]
     }
   }
 }
