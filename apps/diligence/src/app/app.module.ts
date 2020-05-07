@@ -39,6 +39,10 @@ import { SearchShellComponent } from '@the-new-datasite/search/feature-shell'
           {
             path: 'search',
             component: SearchShellComponent
+          },
+          {
+            path: 'search-web-component',
+            component: SearchShellComponent
           }
         ]
       }
