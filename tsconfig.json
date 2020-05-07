@@ -29,6 +29,9 @@
       "@the-new-datasite/shared/theming": ["libs/shared/theming/src/index.ts"],
       "@the-new-datasite/acquire/feature-shell": [
         "libs/acquire/feature-shell/src/index.ts"
+      ],
+      "@the-new-datasite/qa/feature-shell": [
+        "libs/qa/feature-shell/src/index.ts"
       ]
     }
   },

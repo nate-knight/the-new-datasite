@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ShellComponent } from '@the-new-datasite/diligence/feature-shell';
 import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-shell';
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
+import { QaShellComponent } from '@the-new-datasite/qa/feature-shell';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,10 @@ import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature
           {
             path: 'permissions',
             component: PermissionsShellComponent
+          },
+          {
+            path: 'qa',
+            component: QaShellComponent
           }
         ]
       }

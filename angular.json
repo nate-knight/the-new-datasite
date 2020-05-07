@@ -425,8 +425,10 @@
               "apps/acquire/src/favicon.ico",
               "apps/acquire/src/assets"
             ],
-            "styles": ["apps/acquire/src/styles.scss",
-              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css"],
+            "styles": [
+              "apps/acquire/src/styles.scss",
+              "./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -800,6 +802,38 @@
             "tsConfig": ["apps/harness-e2e/tsconfig.e2e.json"],
             "exclude": ["**/node_modules/**", "!apps/harness-e2e/**"]
           }
+        }
+      }
+    },
+    "qa-feature-shell": {
+      "projectType": "library",
+      "root": "libs/qa/feature-shell",
+      "sourceRoot": "libs/qa/feature-shell/src",
+      "prefix": "the-new-datasite",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/qa/feature-shell/tsconfig.lib.json",
+              "libs/qa/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/qa/feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/qa/feature-shell/jest.config.js",
+            "tsConfig": "libs/qa/feature-shell/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/qa/feature-shell/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
         }
       }
     }

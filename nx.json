@@ -71,6 +71,9 @@
     "harness-e2e": {
       "tags": [],
       "implicitDependencies": ["harness"]
+    },
+    "qa-feature-shell": {
+      "tags": []
     }
   }
 }
