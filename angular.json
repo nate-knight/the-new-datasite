@@ -13,7 +13,7 @@
       "prefix": "the-new-datasite",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/diligence",
             "index": "apps/diligence/src/index.html",
@@ -63,7 +63,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "diligence:build"
           },
@@ -86,11 +86,14 @@
               "apps/diligence/tsconfig.app.json",
               "apps/diligence/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/diligence/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/diligence/**"
+            ]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "jestConfig": "apps/diligence/jest.config.js",
             "tsConfig": "apps/diligence/tsconfig.spec.json",
@@ -121,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/diligence-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/diligence-e2e/**"]
+            "tsConfig": [
+              "apps/diligence-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/diligence-e2e/**"
+            ]
           }
         }
       }
@@ -145,7 +153,9 @@
               "apps/redaction/src/favicon.ico",
               "apps/redaction/src/assets"
             ],
-            "styles": ["apps/redaction/src/styles.scss"],
+            "styles": [
+              "apps/redaction/src/styles.scss"
+            ],
             "scripts": [],
             "webpackConfig": "@nrwl/react/plugins/webpack"
           },
@@ -192,7 +202,10 @@
               "apps/redaction/tsconfig.app.json",
               "apps/redaction/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/redaction/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/redaction/**"
+            ]
           }
         },
         "test": {
@@ -226,8 +239,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/redaction-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/redaction-e2e/**"]
+            "tsConfig": [
+              "apps/redaction-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/redaction-e2e/**"
+            ]
           }
         }
       }
@@ -245,7 +263,10 @@
               "libs/shared/ui/tsconfig.lib.json",
               "libs/shared/ui/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/ui/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/ui/**"
+            ]
           }
         },
         "test": {
@@ -382,7 +403,10 @@
               "libs/shared/theming/tsconfig.lib.json",
               "libs/shared/theming/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/shared/theming/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/theming/**"
+            ]
           }
         },
         "test": {
@@ -486,7 +510,10 @@
               "apps/acquire/tsconfig.app.json",
               "apps/acquire/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/acquire/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/acquire/**"
+            ]
           }
         },
         "test": {
@@ -521,8 +548,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/acquire-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/acquire-e2e/**"]
+            "tsConfig": [
+              "apps/acquire-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/acquire-e2e/**"
+            ]
           }
         }
       }
@@ -540,7 +572,10 @@
               "libs/acquire/feature-shell/tsconfig.lib.json",
               "libs/acquire/feature-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/acquire/feature-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/acquire/feature-shell/**"
+            ]
           }
         },
         "test": {
@@ -583,7 +618,9 @@
               "apps/documents/src/favicon.ico",
               "apps/documents/src/assets"
             ],
-            "styles": ["apps/documents/src/styles.scss"],
+            "styles": [
+              "apps/documents/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -641,7 +678,10 @@
               "apps/documents/tsconfig.app.json",
               "apps/documents/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/documents/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/documents/**"
+            ]
           }
         },
         "test": {
@@ -676,8 +716,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/documents-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/documents-e2e/**"]
+            "tsConfig": [
+              "apps/documents-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/documents-e2e/**"
+            ]
           }
         }
       }
@@ -706,7 +751,9 @@
               "apps/harness/src/favicon.ico",
               "apps/harness/src/assets"
             ],
-            "styles": ["apps/harness/src/styles.scss"],
+            "styles": [
+              "apps/harness/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -764,7 +811,10 @@
               "apps/harness/tsconfig.app.json",
               "apps/harness/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/harness/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/harness/**"
+            ]
           }
         },
         "test": {
@@ -799,8 +849,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/harness-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/harness-e2e/**"]
+            "tsConfig": [
+              "apps/harness-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/harness-e2e/**"
+            ]
           }
         }
       }
@@ -818,7 +873,10 @@
               "libs/qa/feature-shell/tsconfig.lib.json",
               "libs/qa/feature-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/qa/feature-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/qa/feature-shell/**"
+            ]
           }
         },
         "test": {
@@ -850,7 +908,10 @@
               "libs/search/feature-shell/tsconfig.lib.json",
               "libs/search/feature-shell/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/search/feature-shell/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/search/feature-shell/**"
+            ]
           }
         },
         "test": {
@@ -881,7 +942,7 @@
       "prefix": "the-new-datasite",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "ngx-build-plus:browser",
           "options": {
             "outputPath": "dist/apps/search",
             "index": "apps/search/src/index.html",
@@ -889,9 +950,23 @@
             "polyfills": "apps/search/src/polyfills.ts",
             "tsConfig": "apps/search/tsconfig.app.json",
             "aot": true,
-            "assets": ["apps/search/src/favicon.ico", "apps/search/src/assets"],
-            "styles": ["apps/search/src/styles.scss"],
-            "scripts": []
+            "assets": [
+              "apps/search/src/favicon.ico",
+              "apps/search/src/assets"
+            ],
+            "styles": [
+              "apps/search/src/styles.scss"
+            ],
+            "scripts": [
+              {
+                "bundleName": "polyfill-webcomp-es5",
+                "input": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"
+              },
+              {
+                "bundleName": "polyfill-webcomp",
+                "input": "node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf.js"
+              }
+            ]
           },
           "configurations": {
             "production": {
@@ -925,7 +1000,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "ngx-build-plus:dev-server",
           "options": {
             "browserTarget": "search:build"
           },
@@ -948,11 +1023,14 @@
               "apps/search/tsconfig.app.json",
               "apps/search/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/search/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/search/**"
+            ]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "ngx-build-plus:karma",
           "options": {
             "jestConfig": "apps/search/jest.config.js",
             "tsConfig": "apps/search/tsconfig.spec.json",
@@ -983,8 +1061,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/search-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/search-e2e/**"]
+            "tsConfig": [
+              "apps/search-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/search-e2e/**"
+            ]
           }
         }
       }

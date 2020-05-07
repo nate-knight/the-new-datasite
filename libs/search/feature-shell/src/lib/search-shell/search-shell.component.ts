@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'the-new-datasite-search-shell',
+  selector: 'search-shell',
   templateUrl: './search-shell.component.html',
   styleUrls: ['./search-shell.component.scss']
 })

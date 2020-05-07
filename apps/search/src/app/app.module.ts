@@ -1,12 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
+import { NgModule, Injector } from '@angular/core';
+import { SearchShellComponent } from '@the-new-datasite/search/feature-shell'
+import {createCustomElement} from '@angular/elements';
 
 @NgModule({
-  declarations: [AppComponent],
   imports: [BrowserModule],
-  providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [SearchShellComponent],
+  providers: []
 })
-export class AppModule {}
+export class AppModule {
+  constructor(injector: Injector) {
+    const custom = createCustomElement(SearchShellComponent, {injector: injector});
+    customElements.define('search-shell', custom);
+  }
+  ngDoBootstrap() {}
+}
