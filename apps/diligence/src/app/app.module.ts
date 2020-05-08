@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
@@ -11,6 +11,7 @@ import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-she
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
 import { QaShellComponent } from '@the-new-datasite/qa/feature-shell';
 import { SearchShellComponent } from '@the-new-datasite/search/feature-shell'
+import { WebComponentShellComponent } from '@the-new-datasite/shared/ui';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,7 +43,7 @@ import { SearchShellComponent } from '@the-new-datasite/search/feature-shell'
           },
           {
             path: 'search-web-component',
-            component: SearchShellComponent
+            component: WebComponentShellComponent
           }
         ]
       }

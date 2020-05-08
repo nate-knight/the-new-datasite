@@ -16,21 +16,31 @@ export class AppComponent implements OnInit {
     // polyfills.src = 'assets/polyfills-es2015.js';
     // document.body.appendChild(polyfills);
 
-    // const main = document.createElement('script');
-    // main.src = 'assets/main-es2015.js';
-    // document.body.appendChild(main);
+    // hello script
+    const main = document.createElement('script');
+    main.src = 'assets/searchapp-es2015.js';
+    document.body.appendChild(main);
 
-    // add web component
-    const searchApp = document.createElement('app-hello-world');
-    searchApp.setAttribute('title', 'Knight');
+    // // hello component
+    const helloApp = document.createElement('app-hello-world');
+    helloApp.setAttribute('title', 'Knight');
 
-    searchApp.addEventListener('display', (event) => {
+    //search script
+    const searchScript = document.createElement('script');
+    searchScript.src = 'assets/search-es2015.js';
+    document.body.appendChild(searchScript);
+
+     // search component
+     const searchApp = document.createElement('search-shell');
+    //  searchApp.setAttribute('title', 'Knight');
+
+    helloApp.addEventListener('display', (event) => {
       this.doSomething(event['detail']);
     });
 
     const content = document.getElementById('my-placeholder');
+    // content.appendChild(helloApp);
     content.appendChild(searchApp);
-  
   }
   doSomething(e) {
     this.output = e;
