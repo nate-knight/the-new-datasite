@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'the-new-datasite-web-component-shell',
@@ -7,40 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WebComponentShellComponent implements OnInit {
 
-  constructor() { }
+  constructor(private elRef: ElementRef) { }
 
   ngOnInit(): void {
-
-     // add script tag
-    // const polyfills = document.createElement('script');
-    // polyfills.src = 'assets/polyfills-es2015.js';
-    // document.body.appendChild(polyfills);
-
-    // const img = document.createElement('img');
-    // img.src = 'assets/logo.png';
-    
-    //hello app
-    // const original = document.createElement('script');
-    // original.src = 'assets/searchapp-es2015.js';
-    // // main.src = 'assets/search-es2015.js';
-    // document.body.appendChild(original);
-
     // search 
     const searchScript = document.createElement('script');
-    searchScript.src = 'assets/search-es2015.js';
+    searchScript.src = 'assets/main-es2015.ee0afc9d727a30a1a6eb.js';
     document.body.appendChild(searchScript);
 
-    // add web component
-    // const helloApp = document.createElement('app-hello-world');
-    // helloApp.setAttribute('title', 'Knight');
-
     const searchApp = document.createElement('search-shell');
-
-
-    const webcomponentshell = document.getElementById('web-component-shell');
-    // webcomponentshell.appendChild(helloApp);
-    webcomponentshell.appendChild(searchApp);
-    // webcomponentshell.appendChild(img);
+    this.elRef.nativeElement.appendChild(searchApp);
+  
   }
 
 }
