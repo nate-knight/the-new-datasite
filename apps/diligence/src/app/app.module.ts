@@ -42,8 +42,9 @@ import { WebComponentShellComponent } from '@the-new-datasite/shared/ui';
             component: SearchShellComponent
           },
           {
-            path: 'search-web-component',
-            component: WebComponentShellComponent
+            path: 'search-v2',
+            component: WebComponentShellComponent,
+            data: { scriptSrc: 'assets/main-es2015.ee0afc9d727a30a1a6eb.js', selector: 'search-shell' }
           }
         ]
       }

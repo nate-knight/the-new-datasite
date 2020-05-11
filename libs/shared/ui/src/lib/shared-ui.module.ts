@@ -13,9 +13,10 @@ import { CapabilitySchmapabilityTemplateComponent } from './capability-templates
 import { ExpansionPanelOneComponent } from './expansion-panel-one/expansion-panel-one.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
 import { CapabilityTemplateFullWidthMainComponent } from './capability-templates/capability-template-full-width-main/capability-template-full-width-main.component';
 import { WebComponentShellComponent } from './web-component-shell/web-component-shell.component';
-
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   imports: [
     CommonModule,
@@ -25,7 +26,9 @@ import { WebComponentShellComponent } from './web-component-shell/web-component-
     MatTabsModule,
     MatCardModule,
     MatExpansionModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatIconModule
   ],
   declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent, ExpansionPanelOneComponent, CapabilityTemplateFullWidthMainComponent, WebComponentShellComponent],
   exports: [

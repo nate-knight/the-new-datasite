@@ -1,23 +1,51 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'the-new-datasite-web-component-shell',
   templateUrl: './web-component-shell.component.html',
   styleUrls: ['./web-component-shell.component.scss']
 })
-export class WebComponentShellComponent implements OnInit {
+export class WebComponentShellComponent implements OnInit, OnDestroy {
 
-  constructor(private elRef: ElementRef) { }
+  private sub: Subscription;
+
+  constructor(private elRef: ElementRef, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    // search 
-    const searchScript = document.createElement('script');
-    searchScript.src = 'assets/main-es2015.ee0afc9d727a30a1a6eb.js';
-    document.body.appendChild(searchScript);
+   
+    // this.sub = this.route.params.subscribe(params => {
+    //   // this.id = +params['id']; // (+) converts string 'id' to a number
 
-    const searchApp = document.createElement('search-shell');
-    this.elRef.nativeElement.appendChild(searchApp);
+    //   // In a real app: dispatch action to load the details here.
+    //   console.log('params', params);
+    //   // params.each(param => {
+    //   //   console.log('param', param);
+    //   // });
+     
+    // });
+    
+    // Add script if it hasn't already been added:
+    const s = document.createElement('script');
+    s.src = this.route.snapshot.data.scriptSrc;
+    document.head.appendChild(s);
+
+   
+    
   
+    // add component selector
+     const selector = document.createElement(this.route.snapshot.data.selector);
+     const params = Object.keys(this.route.snapshot.params);
+     params.forEach(param => {
+      selector.setAttribute(param, this.route.snapshot.params[param]);
+      });
+     this.elRef.nativeElement.appendChild(selector);
+  
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 
 }
