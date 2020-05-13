@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { DocumentsFeatureShellModule } from '@the-new-datasite/documents/feature-shell';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchFeatureShellModule } from '@the-new-datasite/search/feature-shell';
+import { SearchFeatureShellModule, SearchShellComponent } from '@the-new-datasite/search/feature-shell';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,7 +13,11 @@ import { SearchFeatureShellModule } from '@the-new-datasite/search/feature-shell
     BrowserModule,
     DocumentsFeatureShellModule,
     SearchFeatureShellModule,
-    RouterModule.forRoot([], { initialNavigation: 'enabled' }),
+    RouterModule.forRoot([
+      // {path: '', redirectTo: 'search', pathMatch: 'full'},
+      // {path: 'search', component: SearchShellComponent}
+    ],
+    { initialNavigation: 'enabled' }),
     BrowserAnimationsModule    
   ],
   providers: [],

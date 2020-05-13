@@ -35,7 +35,8 @@
       ],
       "@the-new-datasite/search/feature-shell": [
         "libs/search/feature-shell/src/index.ts"
-      ]
+      ],
+      "@the-new-datasite/loaders": ["libs/loaders/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

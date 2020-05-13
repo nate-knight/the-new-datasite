@@ -26,21 +26,22 @@ export class AppComponent implements OnInit {
     // helloApp.setAttribute('title', 'Knight');
 
     //search script
-    // const searchScript = document.createElement('script');
+    const searchScript = document.createElement('script');
+    searchScript.src= 'assets/main-es2015.d00f46a9ac0c873ebe9a.js';
     // searchScript.src = 'assets/search-es2015.js';
-    // document.body.appendChild(searchScript);
+    document.body.appendChild(searchScript);
 
      // search component
-    //  const searchApp = document.createElement('search-shell');
+     const searchApp = document.createElement('search-shell');
     //  searchApp.setAttribute('title', 'Knight');
 
     // helloApp.addEventListener('display', (event) => {
     //   this.doSomething(event['detail']);
     // });
 
-    // const content = document.getElementById('my-placeholder');
+    const content = document.getElementById('my-placeholder');
     // content.appendChild(helloApp);
-    // content.appendChild(searchApp);
+    content.appendChild(searchApp);
   }
   doSomething(e) {
     this.output = e;

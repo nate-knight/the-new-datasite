@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WebComponentShellComponent } from './web-component-shell.component';
+import { WebComponentLoaderComponent } from './web-component-loader.component';
 
-describe('WebComponentShellComponent', () => {
-  let component: WebComponentShellComponent;
-  let fixture: ComponentFixture<WebComponentShellComponent>;
+describe('WebComponentLoaderComponent', () => {
+  let component: WebComponentLoaderComponent;
+  let fixture: ComponentFixture<WebComponentLoaderComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WebComponentShellComponent ]
+      declarations: [ WebComponentLoaderComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WebComponentShellComponent);
+    fixture = TestBed.createComponent(WebComponentLoaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

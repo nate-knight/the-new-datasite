@@ -84,6 +84,9 @@
     "search-e2e": {
       "tags": [],
       "implicitDependencies": ["search"]
+    },
+    "loaders": {
+      "tags": []
     }
   }
 }

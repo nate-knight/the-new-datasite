@@ -11,7 +11,10 @@ import { DocumentsShellComponent } from '@the-new-datasite/documents/feature-she
 import { PermissionsShellComponent } from '@the-new-datasite/permissions/feature-shell';
 import { QaShellComponent } from '@the-new-datasite/qa/feature-shell';
 import { SearchShellComponent } from '@the-new-datasite/search/feature-shell'
-import { WebComponentShellComponent } from '@the-new-datasite/shared/ui';
+// import { WebComponentShellComponent } from '@the-new-datasite/shared/ui';
+// import { AngularComponentLoaderComponent } from '@the-new-datasite/loaders';
+import  { AngularComponentLoaderComponent, WebComponentLoaderComponent} from '@the-new-datasite/loaders';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,12 +42,15 @@ import { WebComponentShellComponent } from '@the-new-datasite/shared/ui';
           },
           {
             path: 'search',
-            component: SearchShellComponent
+            // component: SearchShellComponent
+            component: AngularComponentLoaderComponent,
+            data: { selector: 'search-shell' }   
           },
           {
-            path: 'search-v2',
-            component: WebComponentShellComponent,
-            data: { scriptSrc: 'assets/main-es2015.ee0afc9d727a30a1a6eb.js', selector: 'search-shell' }
+            path: 'search-wc',
+            component: WebComponentLoaderComponent,
+            // data: { scriptSrc: 'assets/main-es2015.f420fd33b86d71de3b11.js', selector: 'search-shell' }
+            data: { scriptSrc: 'assets/main-es2015.dca2e2343280a96e8731.js', selector: 'search-shell' }            
           }
         ]
       }
@@ -53,6 +59,9 @@ import { WebComponentShellComponent } from '@the-new-datasite/shared/ui';
     BrowserAnimationsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  // schemas: [
+  //   CUSTOM_ELEMENTS_SCHEMA
+  // ]
 })
 export class AppModule {}
