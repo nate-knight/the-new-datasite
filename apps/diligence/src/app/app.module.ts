@@ -50,7 +50,12 @@ import  { AngularComponentLoaderComponent, WebComponentLoaderComponent} from '@t
             path: 'search-wc',
             component: WebComponentLoaderComponent,
             // data: { scriptSrc: 'assets/main-es2015.f420fd33b86d71de3b11.js', selector: 'search-shell' }
-            data: { scriptSrc: 'assets/main-es2015.dca2e2343280a96e8731.js', selector: 'search-shell' }            
+            data: { scriptSrc: 'assets/main-es2015.47153bd0320e42b0a9a7.js', selector: 'search-shell' }            
+          },
+          {
+            path: 'dashboard',
+            component: WebComponentLoaderComponent,
+            data: {scriptSrc: 'assets/dashboard-1.js', selector: 'dashboard-tile'}
           }
         ]
       }

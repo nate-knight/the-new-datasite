@@ -10,7 +10,8 @@
         <a mat-tab-link routerLink="permissions" routerLinkActive="active">Permissions</a>
         <a mat-tab-link routerLink="qa" routerLinkActive="active"> Q&A </a>
         <a mat-tab-link routerLink="search" routerLinkActive="active">Search</a>
-        <a mat-tab-link routerLink="search-wc" routerLinkActive="active">Search WC</a>
+        <a mat-tab-link [routerLink]="['search-wc', {'searchTerm': 'buffalo'}]" routerLinkActive="active">Search WC</a>
+        <a mat-tab-link [routerLink]="['dashboard', {'a':'1','b': 'two'}]" routerLinkActive="active">Dashboard WC</a>
     </nav>
 
 

@@ -20,15 +20,17 @@ export class WebComponentLoaderComponent implements OnInit {
     document.head.appendChild(s);
     
     // add component selector
-    const selector = document.createElement(this.route.snapshot.data.selector) as NgElement & WithProperties<{searchTerm: string}>;
+    // const selector = document.createElement(this.route.snapshot.data.selector) as NgElement & WithProperties<{searchTerm: string}>;
+    const selector = document.createElement(this.route.snapshot.data.selector);
     
-    // const params = Object.keys(this.route.snapshot.params);
-    // params.forEach(param => {
-    //  selector.setAttributeNS(null, param, this.route.snapshot.params[param]);
-    // });
+    const params = Object.keys(this.route.snapshot.params);
+    params.forEach(param => {
+     selector.setAttributeNS(null, param, this.route.snapshot.params[param]);
+    });
 
-
-    selector.setAttributeNS(null, 'searchTerm', 'giraffe');
+    // selector.setAttribute('searchTerm', 'balloon');
+    // selector.setAttributeNS(null, 'searchTerm', 'giraffe');
+    // selector.setAttributeNS(null, 'a', 'giraffe');
 
     this.elRef.nativeElement.appendChild(selector);
   }
