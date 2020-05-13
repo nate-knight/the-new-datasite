@@ -9,8 +9,8 @@ import {createCustomElement} from '@angular/elements';
   providers: []
 })
 export class AppModule {
-  constructor(injector: Injector) {
-    const custom = createCustomElement(SearchShellComponent, {injector: injector});
+  constructor(private injector: Injector) {
+    const custom = createCustomElement(SearchShellComponent, {injector: this.injector});
     customElements.define('search-shell', custom);
   }
   ngDoBootstrap() {}

@@ -5,7 +5,6 @@ import { DashboardTileComponent } from './dashboard-tile/dashboard-tile.componen
 import {createCustomElement} from '@angular/elements';
 
 @NgModule({
-  declarations: [ DashboardTileComponent],
   imports: [BrowserModule],
   providers: [],
   entryComponents: [

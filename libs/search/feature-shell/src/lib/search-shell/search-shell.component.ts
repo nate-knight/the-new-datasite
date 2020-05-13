@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchShellComponent implements OnInit {
   // searchTerm: string;
-  @Input() searchTerm;
+  @Input() searchTerm: string;
 
   // constructor(private route: ActivatedRoute) { }
   constructor() { }

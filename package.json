@@ -26,8 +26,7 @@
     "dep-graph": "nx dep-graph",
     "help": "nx help",
     "postinstall": "ngcc",
-    "postinstall:bak": "ngcc",
-    "build:search:externals": "ng build --extra-webpack-config apps/search/webpack.externals.js --prod --project search --single-bundle"
+    "postinstall:bak": "ngcc"
   },
   "private": true,
   "dependencies": {
