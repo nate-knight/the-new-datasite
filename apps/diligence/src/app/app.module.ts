@@ -49,7 +49,7 @@ import  { AngularComponentLoaderComponent, WebComponentLoaderComponent} from '@t
           {
             path: 'search-wc',
             component: WebComponentLoaderComponent,
-            data: { scriptSrc: 'assets/search-3.js', selector: 'search-shell' }            
+            data: { scriptSrc: 'assets/search-4.js', selector: 'search-shell' }            
           },
           {
             path: 'dashboard',
