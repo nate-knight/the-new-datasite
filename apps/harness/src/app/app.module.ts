@@ -22,7 +22,7 @@ import { SearchFeatureShellModule, SearchShellComponent } from '@the-new-datasit
   ],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  // schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   entryComponents: []
 })
 export class AppModule {}

@@ -1,5 +1,7 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef,  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgElement, WithProperties } from '@angular/elements';
+
 
 @Component({
   selector: 'the-new-datasite-web-component-loader',
@@ -18,7 +20,7 @@ export class WebComponentLoaderComponent implements OnInit {
     document.head.appendChild(s);
     
     // add component selector
-    const selector = document.createElement(this.route.snapshot.data.selector);
+    const selector = document.createElement(this.route.snapshot.data.selector) as NgElement & WithProperties<{searchTerm: string}>;
     
     // const params = Object.keys(this.route.snapshot.params);
     // params.forEach(param => {

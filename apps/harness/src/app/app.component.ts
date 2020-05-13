@@ -28,11 +28,15 @@ export class AppComponent implements OnInit {
     //search script
     const searchScript = document.createElement('script');
     searchScript.src= 'assets/main-es2015.d00f46a9ac0c873ebe9a.js';
+    // searchScript.src = 'assets/main-es2015.dca2e2343280a96e8731.js';
+    // searchScript.src = 'assets/searchapp-es2015.js';
     // searchScript.src = 'assets/search-es2015.js';
     document.body.appendChild(searchScript);
 
      // search component
      const searchApp = document.createElement('search-shell');
+    //  searchApp.setAttributeNS(null, 'searchTerm', 'buddy');
+     searchApp.setAttribute('searchTerm', 'hey there');
     //  searchApp.setAttribute('title', 'Knight');
 
     // helloApp.addEventListener('display', (event) => {
