@@ -1,7 +1,7 @@
 import { Component, OnInit, ElementRef,  } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NgElement, WithProperties } from '@angular/elements';
-
+import { camelCaseToDashedCase } from '@the-new-datasite/shared/util';
 
 @Component({
   selector: 'the-new-datasite-web-component-loader',
@@ -24,7 +24,7 @@ export class WebComponentLoaderComponent implements OnInit {
     
     const params = Object.keys(this.route.snapshot.params);
     params.forEach(param => {
-     selector.setAttributeNS(null, param, this.route.snapshot.params[param]);
+      selector.setAttribute(camelCaseToDashedCase(param), this.route.snapshot.params[param]);
     });
 
     this.elRef.nativeElement.appendChild(selector);

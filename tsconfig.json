@@ -37,6 +37,7 @@
         "libs/search/feature-shell/src/index.ts"
       ],
       "@the-new-datasite/loaders": ["libs/loaders/src/index.ts"],
+      "@the-new-datasite/shared/util": ["libs/shared/util/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
