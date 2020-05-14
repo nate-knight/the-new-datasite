@@ -1,2 +1,2 @@
 export * from './lib/shared-ui.module';
-export { TheFerrariTemplateComponent } from './lib/product-templates/the-ferrari-template/the-ferrari-template.component';
+export { ProductTemplateOneComponent } from './lib/product-templates/product-template-one/product-template-one.component';

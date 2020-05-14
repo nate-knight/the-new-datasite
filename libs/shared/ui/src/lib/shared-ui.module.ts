@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { TheFerrariTemplateComponent } from './product-templates/the-ferrari-template/the-ferrari-template.component';
+import { ProductTemplateOneComponent } from './product-templates/product-template-one/product-template-one.component';
 import { ProductHeaderComponent } from './product-header/product-header.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from "@angular/material/button";
@@ -31,11 +31,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatIconModule,
   ],
-  declarations: [TheFerrariTemplateComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent, ExpansionPanelOneComponent, CapabilityTemplateFullWidthMainComponent
+  declarations: [ProductTemplateOneComponent, ProductHeaderComponent, LightBulbComponent, BrandingBarComponent, CapabilitySchmapabilityTemplateComponent, ExpansionPanelOneComponent, CapabilityTemplateFullWidthMainComponent
   
   ],
   exports: [
-    TheFerrariTemplateComponent,
+    ProductTemplateOneComponent,
     ProductHeaderComponent, 
     LightBulbComponent, 
     CapabilitySchmapabilityTemplateComponent,
